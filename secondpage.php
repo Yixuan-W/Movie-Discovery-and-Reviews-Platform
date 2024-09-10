@@ -264,7 +264,7 @@
 	</div>
 
   <ul id="nav" class="container-fluid">
-		<li><a href="firstpage.html">Discover & Watch</a></li>
+		<li><a href="index.html">Discover & Watch</a></li>
 		<li><a id="active-menu" href="secondpage.php">Community Reviews</a></li>
 		<li><a href="thirdpage.html">Curator's Corner</a></li>
 	</ul>
