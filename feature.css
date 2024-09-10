@@ -1,0 +1,62 @@
+@font-face {
+	font-family: ConfettiStream;
+	src: url("fonts/ConfettiStream.ttf");
+}
+@font-face {
+	font-family: CalligraphyFLF;
+	src: url("fonts/CalligraphyFLF.ttf");
+}
+@font-face {
+	font-family: Thyssen;
+	src: url("fonts/Thyssen.ttf");
+}
+#header {
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	text-shadow: 0px 0px 10px #000;
+	height: 600px;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+#footer {
+	background-color: #777;
+	color: #FFF;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	font-size: 0.8em;
+}
+p {
+	color: #F1F1F1;
+	font-family: Thyssen, cursive;
+	font-size: 1.3em;
+}
+#nav {
+  	display: flex;
+  	justify-content: center;
+  	list-style: none;
+	padding: 0;
+	margin: 0;
+	padding-bottom: 10px;
+}
+#nav li {
+  	background-color: #8B1700;
+  	flex: 1;
+  	text-align: center;
+  	position: relative;
+}
+#nav li:hover, #active-menu {
+  	background-color: #DB9316;
+}
+#nav a {
+	font-family: Thyssen, cursive;
+	font-size: 1.3em;
+  	text-decoration: none;
+ 	color: #F1F1F1;
+  	display: block;
+  	text-align: center;
+  	line-height: 50px;
+  	transition: color 0.3s;
+}

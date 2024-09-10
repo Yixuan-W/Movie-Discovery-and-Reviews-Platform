@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Welcome to Cinema Spectrum: the ultimate hub for film enthusiasts. Discover and explore a vast collection of movies, from classics to the latest releases. Join our community and share your passion for cinema.">
+  	
+	<title>Final Project | First Page</title>
+
+	<link rel="stylesheet" href="feature.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<style>
+		#header {
+		  background-image: url('img/header.jpg');
+		  height: 600px;
+		  background-size: cover;
+		  background-position: center;
+		  position: relative;
+		  text-align: center;
+		}
+		.header-paragraph {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding: 20px;
+		}
+		#page-wrapper {
+      width: 100%;
+    }
+    .button-a {
+    	color: #F1F1F1;
+			font-family: Thyssen, cursive;
+			font-size: 1.2em;
+    }
+    body {
+    	background-color: #2C2C2C;
+    }
+		h1 {
+			color: #F1F1F1;
+			margin: 0px;
+			font-size: 5em;
+			font-family: ConfettiStream, fantasy;
+		}
+		h3 {
+			color: #F1F1F1;
+			margin: 30px;
+			font-size: 1.5em;
+			font-family: ConfettiStream, fantasy;
+		}
+		h2 {
+			font-size: 2.5em;
+			color: #F1F1F1;
+			font-family: CalligraphyFLF, cursive;
+		}
+		.movie-container {
+		  position: relative;
+		  margin-bottom: 20px;
+		  overflow: hidden;
+		}
+		.movie-container img {
+		    display: block;
+		    width: 100%;
+		    height: auto;
+		}
+		.title-overlay {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    background: rgba(0, 0, 0, 0.5);
+		    color: #F1F1F1;
+		    font-family: Thyssen, cursive;
+		    font-size: 1.5em;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    opacity: 0;
+		    transition: opacity 0.5s;
+		    padding: 0;
+		    text-align: center;
+		    overflow: hidden;
+		    white-space: normal;
+		}
+		.movie-container:hover .title-overlay {
+		    opacity: 1;
+		}
+		.video-wrapper {
+	    position: relative;
+	    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+	    height: 0;
+		}
+		.video-wrapper iframe {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<div id="header" class="container-fluid">
+    <div class="row h-100">
+      <div class="col d-flex flex-column justify-content-center">
+        <h1>Cinema Spectrum</h1>
+        <h3>Your Gateway to the World of Film</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <p class="header-paragraph col-10 m-0">
+        	Welcome to Cinema Spectrum, where every frame matters and every story resonates. Dive into an ocean of reels and discover your next favorite movie. From the timeless classics to the cutting edge of the cinema frontier, embark on a journey through the narratives that shape our world, touch our hearts, and ignite our imaginations. Your seat awaits in the grand theater of human emotion and creativity - let the show begin!
+        </p>
+      </div>
+    </div>
+	</div>
+
+  <ul id="nav" class="container-fluid">
+		<li><a id="active-menu" href="firstpage.html">Discover & Watch</a></li>
+		<li><a href="secondpage.php">Community Reviews</a></li>
+		<li><a href="thirdpage.html">Curator's Corner</a></li>
+	</ul>
+
+	<div class="container my-3">
+	  <div class="row justify-content-center">
+	    <div class="col-12 col-md-8">
+	      <h2 class="text-center">Search for a Movie Trailer</h2>
+	      <form id="search-form" class="input-group mb-3">
+	        <input type="text" id="search-input" class="form-control" placeholder="Enter a movie name...">
+	        <div class="input-group-append">
+	          <button class="btn btn-primary button-a" type="submit">Search</button>
+	        </div>
+	      </form>
+	      <div id="video-result" class="text-center"></div>
+	    </div>
+	  </div>
+	</div>
+
+  <div id="page-wrapper" class="container-fluid">
+  	<div class="row justify-content-center">
+	    <div class="col-10">
+	      <h2>Popular</h2>
+	      <div id="popular-movies" class="row">
+	        <!-- inserted by the script -->
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="row justify-content-center">
+	    <div class="col-10">
+	      <h2>Trending</h2>
+	      <div id="trending-movies" class="row">
+	        <!-- inserted by the script -->
+	      </div>
+	    </div>
+	  </div>
+
+		<div class="row justify-content-center">
+		  <div class="col-10">
+		    <h2>Upcoming</h2>
+		    <div id="upcoming-movies" class="row">
+		      <!-- inserted by the script -->
+		    </div>
+		  </div>
+		</div>
+
+		<div class="row justify-content-center">
+		  <div class="col-10">
+		    <h2>Top Rated</h2>
+		    <div id="top-rated-movies" class="row">
+		      <!-- inserted by the script -->
+		    </div>
+		  </div>
+		</div>
+	</div>
+
+  <div id="footer" class="container-fluid">
+  	<div class="row">
+      <div class="col-12 text-center">
+        ITP 303 - Final Project of Yixuan Wang &copy; 2024
+      </div>
+    </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <script>
+	  const apiKey = "e394a112beb1a9ff8c02907c0e769826";
+	  let displayedMovieIds = [];
+
+	  function fetchMovies(url, containerId, page = 1) {
+    	$.ajax({
+        url: `${url}&page=${page}`,
+        dataType: "json",
+        success: function(data) {
+          let moviesNeeded = 6;
+          let uniqueMovies = data.results.filter(movie => !displayedMovieIds.includes(movie.id)).slice(0, moviesNeeded);
+            
+          uniqueMovies.forEach(movie => {
+            createMovieElement(movie, containerId);
+            displayedMovieIds.push(movie.id);
+          });
+
+          if (uniqueMovies.length < moviesNeeded && page < data.total_pages) {
+            fetchMovies(url, containerId, page + 1);
+          }
+        },
+        error: function(error) {
+          console.log('Error fetching movies:', error);
+        }
+    	});
+		}
+
+		function createMovieElement(movie, containerId) {
+			if (displayedMovieIds.includes(movie.id)) {
+        return;
+    	}
+
+    	displayedMovieIds.push(movie.id);
+
+		  const container = document.querySelector(`#${containerId}`);
+
+		  const colDiv = document.createElement('div');
+		  colDiv.className = 'col-2 movie-container';
+
+		  const img = document.createElement('img');
+		  img.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+		  img.alt = `${movie.title}`;
+		  img.className = 'img-fluid';
+
+		  const titleOverlay = document.createElement('div');
+		  titleOverlay.className = 'title-overlay';
+		  titleOverlay.textContent = movie.title;
+
+		  colDiv.appendChild(img);
+		  colDiv.appendChild(titleOverlay);
+
+		  container.appendChild(colDiv);
+		}
+
+		$(document).ready(function() {
+			const popularMoviesUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
+		  const trendingMoviesUrl = `https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}`;
+		  const topRatedMoviesUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`;
+		  const upcomingMoviesUrl = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=1`;
+
+		  fetchMovies(popularMoviesUrl, 'popular-movies');
+		  fetchMovies(trendingMoviesUrl, 'trending-movies');
+		  fetchMovies(upcomingMoviesUrl, 'upcoming-movies');
+		  fetchMovies(topRatedMoviesUrl, 'top-rated-movies');
+		});
+
+		document.querySelector("#search-form").onsubmit = function(event) {
+		  event.preventDefault();
+		  const searchTerm = $('#search-input').val().trim();
+
+		  if (!searchTerm) {
+		    alert('Please enter a movie name to search.');
+		    return;
+		  }
+
+		  const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(searchTerm)}`;
+
+		  $.ajax({
+		    url: searchUrl,
+		    success: function(searchResult) {
+		      if (searchResult.results.length > 0) {
+		        const movieId = searchResult.results[0].id;
+		        fetchMovieTrailer(movieId);
+		      } else {
+		        document.querySelector('#video-result').innerHTML = '<p>No results found. Try another search.</p>';
+		      }
+		    },
+		    error: function() {
+		      alert('Error searching for movie.');
+		    }
+		  });
+		};
+
+		function createVideoElement(videoKey) {
+	    const container = document.querySelector('#video-result');
+	    container.innerHTML = '';
+
+	    const wrapper = document.createElement('div');
+	    wrapper.className = 'video-wrapper';
+
+	    const iframe = document.createElement('iframe');
+	    iframe.setAttribute('src', `https://www.youtube.com/embed/${videoKey}`);
+	    iframe.setAttribute('frameborder', '0');
+	    iframe.setAttribute('allow', 'autoplay; encrypted-media');
+	    iframe.setAttribute('allowfullscreen', true);
+
+	    wrapper.appendChild(iframe);
+	    container.appendChild(wrapper);
+		}
+
+		function fetchMovieTrailer(movieId) {
+	    const videoUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}&language=en-US`;
+
+	    $.ajax({
+	      url: videoUrl,
+	      success: function(videoResult) {
+	        const trailer = videoResult.results.find(video => video.type === "Trailer");
+	        if (trailer) {
+	          createVideoElement(trailer.key);
+	        } 
+	        else {
+	          document.querySelector('#video-result').innerHTML = '<p>No trailer found for this movie.</p>';
+	        }
+	      },
+	      error: function() {
+	        alert('Error fetching movie trailer.');
+	      }
+	    });
+		}
+
+  </script>
+
+</body>
+</html>

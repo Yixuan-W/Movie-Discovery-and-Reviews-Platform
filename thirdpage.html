@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the Curator's Corner for a handpicked selection of films that define cinematic excellence. Dive deep into our curated reviews and insights, celebrating both timeless classics and innovative gems.">
+  	
+	<title>Final Project | Third Page</title>
+
+	<link rel="stylesheet" href="feature.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<style>
+		#header {
+		  background-image: url('img/away.jpg');
+		  text-align: center;
+		}
+		.header-paragraph {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding: 20px;
+		  color: rebeccapurple;
+		  text-shadow: none;
+		}
+		#page-wrapper {
+      width: 100%;
+    }
+    body {
+    	background-color: #2C2C2C;
+    }
+		h1 {
+			color: rebeccapurple;
+			margin: 0px;
+			font-size: 5em;
+			font-family: ConfettiStream, fantasy;
+			text-shadow: none;
+		}
+		h3 {
+			color: rebeccapurple;
+			margin: 30px;
+			font-size: 1.5em;
+			font-family: ConfettiStream, fantasy;
+			text-shadow: none;
+		}
+		h2 {
+			font-size: 2.5em;
+			color: greenyellow;
+			font-family: CalligraphyFLF, cursive;
+		}
+		#form-t {
+			color: #F1F1F1;
+		}
+		.form-label {
+	    color: #F1F1F1;
+	    font-family: 'Thyssen', cursive;
+	    font-size: 1.3em;
+		}
+		.movie-section {
+			position: relative;
+			margin-top: 25px;
+      background-color: #1b262c;
+      color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .movie-description {
+      margin: 20px 0;
+      color: #c7c7c7;
+      flex-grow: 1;
+    }
+		.remove-movie {
+		  position: absolute;
+		  top: 20px;
+		  right: 20px;
+		  width: 30px;
+		  height: 30px;
+		  padding: 0;
+		  background-color: #dc3545;
+		  border: none;
+		  border-radius: 50%;
+		  cursor: pointer;
+		  color: white;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  line-height: 1;
+		  font-size: 17px;
+		  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+		}
+		.remove-movie:hover {
+		  background-color: #ba1323;
+		  transition: all 0.2s ease;
+		}
+    .movie-poster {
+      width: 330px;
+      height: auto;
+			margin: auto;
+			object-fit: cover;
+			padding-top: 30px;
+			padding-right: 35px;
+			padding-bottom: 30px;
+    }
+    .col-4 {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.movie-meta {
+  		color: #bbe1fa;
+  	}
+	</style>
+</head>
+
+<body>
+	<div id="header" class="container-fluid">
+    <div class="row h-100">
+      <div class="col d-flex flex-column justify-content-center">
+        <h1>Curator Corner</h1>
+        <h3>Handpicked Cinema Treasures</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <p class="header-paragraph col-10 m-0">
+          Step into the Curator's Corner, where the art of film meets meticulous selection. Here, every flickering image and whispered dialogue is a brushstroke in a larger masterpiece. Our carefully chosen films represent the pinnacle of cinematic achievement, ranging from the avant-garde to the monumental blockbusters that have shaped generations. Delve into our exclusive collection and let the stories take you on a curated journey of emotions, ideas, and breathtaking visuals. Whether it's a timeless classic or an underrated gem, each movie is a chapter in the grand narrative of film history, waiting to unfold before your eyes.
+        </p>
+      </div>
+    </div>
+	</div>
+
+
+  <ul id="nav" class="container-fluid">
+		<li><a href="firstpage.html">Discover & Watch</a></li>
+		<li><a href="secondpage.php">Community Reviews</a></li>
+		<li><a id="active-menu" href="thirdpage.html">Curator's Corner</a></li>
+	</ul>
+
+	<div class="container-fluid my-3">
+	  <div class="row justify-content-center">
+	    <div class="col-8">
+	      <h2 id="form-t" class="text-center">Add Your Favorite Film</h2>
+	      <form id="add-movie-form" class="mb-3">
+	      	<div class="form-row">
+	      		<div class="col-6">
+	      			<label for="movie-title" class="form-label">Movie Title</label>
+	      			<input type="text" class="form-control" id="movie-title" required>
+	      			<div id="movie-title-error" class="form-text text-danger error-check"></div>
+	      		</div>
+	          <div class="col-6">
+	            <label for="movie-director" class="form-label">Director's Name</label>
+	            <input type="text" class="form-control" id="movie-director" required>
+	            <div id="movie-director-error" class="form-text text-danger error-check"></div>
+	          </div>
+	        </div>
+	        <div class="form-row mt-3">
+	          <div class="col-6">
+	            <label for="movie-feelings" class="form-label">Personal Feelings</label>
+	            <textarea class="form-control" id="movie-feelings" rows="3" required></textarea>
+	            <div id="movie-feelings-error" class="form-text text-danger error-check"></div>
+	          </div>
+	          <div class="col-6">
+	            <label for="movie-inspiration" class="form-label">Importance and Inspiration</label>
+	            <textarea class="form-control" id="movie-inspiration" rows="3" required></textarea>
+	            <div id="movie-inspiration-error" class="form-text text-danger error-check"></div>
+	          </div>
+	        </div>
+	        <div class="form-row mt-3">
+	          <div class="col-12">
+	            <label for="movie-poster-url" class="form-label">Poster URL</label>
+	            <input type="url" class="form-control" id="movie-poster-url" placeholder="http://example.com/poster.jpg" required>
+	            <div id="movie-poster-url-error" class="form-text text-danger error-check"></div>
+	          </div>
+	        </div>
+	        <div class="form-row justify-content-center mt-3">
+	          <button type="submit" class="btn btn-primary w-25 form-label">Add Movie</button>
+	        </div>
+	      </form>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="container mb-4">
+    <div class="movie-section">
+    	<div class="row">
+    		<div class="col-8">
+    			<h2>Certified Copy</h2>
+    			<p class="movie-meta">Directed by Abbas Kiarostami</p>
+    			<p class="movie-description">
+    				The experience of watching "Certified Copy" is akin to embarking on a journey through the emotional landscapes that shape our understanding of relationships and art. Initially, I approached the film with a sense of curiosity, intrigued by the premise of examining authenticity in life and in art. As the narrative unfolded, I found myself deeply engaged with the subtle complexities of the characters’ interactions, which reflect the enigmatic nature of human connections. Abbas Kiarostami masterfully blurs the line between reality and pretense, creating a space where the audience must question their perceptions. Juliette Binoche's portrayal is nothing short of stellar, infusing her character with a multifaceted depth that speaks to the core of our shared human experiences.
+    			</p>
+    			<p class="movie-description">
+    				"Certified Copy" is a cinematic gem that delves into the essence of authenticity and perception. Its importance lies in its ability to challenge viewers intellectually while resonating emotionally, a duality that is the hallmark of great art. Director Abbas Kiarostami's unique narrative approach invites audiences to partake in a nuanced dialogue between the film and their personal reflections on love, art, and the nature of genuine connection. Juliette Binoche’s performance is a testament to the film's emotional depth, bringing a compelling realism that transcends the screen. As the film weaves between the real and the perceived, it calls into question the validity of our experiences and the value we place on originality. In a world saturated with reproductions, "Certified Copy" is a profound meditation on what it means to be truly authentic, both in our art and in our lives.
+    			</p>
+    		</div>
+    		<div class="col-4">
+    			<img src="https://m.media-amazon.com/images/M/MV5BYzhiNGVmZDEtZjk4MC00ZjcwLWI2NzUtNzNkYzY2ZjQyODRjXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_.jpg" alt="Certified Copy" class="movie-poster">
+    		</div>
+    		<button class="btn btn-danger remove-movie"><i class="fas fa-trash-alt"></i></button>
+    	</div>
+    </div>
+
+    <div class="movie-section">
+    	<div class="row">
+    		<div class="col-8">
+    			<h2>Happy Hour</h2>
+    			<p class="movie-meta">Directed by Ryusuke Hamaguchi</p>
+    			<p class="movie-description">
+    				Initially, the five-hour runtime was daunting; I feared the inability to remain immersed in the film world for so long. However, once I engaged with the story, I lost all sense of time. The film even served as an impromptu lesson on emotions in the first hour and a reading class in the last. The director's portrayal of the four characters was seamless, presenting their cheerful, reserved, independent, and mundane natures effortlessly without the need for dramatic plot points. The workshop scene was particularly convincing. Despite their diverse personalities, all characters are shackled by life's constraints - bursting with repression, impulsiveness, and self-discovery. Sadly, everyone is far from happy; they've all lost much, all striving to better their lives to no avail. What then is marriage? What are contractual relationships? Patient - doctor, spouses, clients, classmates, friends - none escape this disappointing cage. The film is as subtle as it is ordinary, forcing us to adapt to its slow pace, but the slower it goes, the more bitter and hopeless it feels.
+    			</p>
+    			<p class="movie-description">
+    				"Happy Hour" stands out as a significant contribution to cinema due to its raw exploration of the human condition. Through the extensive five-hour narrative, the film indulges in a deep dive into the intricacies of interpersonal relationships and the societal expectations placed upon individuals. It deftly questions the constructs of marriage and friendship within the framework of societal contracts, juxtaposing individual desires against collective norms. The director's pacing and gentle storytelling compel the audience to experience the characters' sense of stasis and lack of fulfillment, a daring move that distances itself from mainstream cinematic formulas. This film offers an authentic slice of life that resonates with anyone who has ever grappled with the pursuit of happiness in a world rife with silent battles and unspoken disappointments.
+    			</p>
+    		</div>
+    		<div class="col-4">
+    			<img src="https://m.media-amazon.com/images/M/MV5BNzMxMTRkNDEtNGU0YS00NzUyLWFlNWQtYjJkYzNmYmUzYzk2XkEyXkFqcGdeQXVyNTY0MDQ0ODI@._V1_FMjpg_UX1000_.jpg" alt="Happy Hour" class="movie-poster">
+    		</div>
+    		<button class="btn btn-danger remove-movie"><i class="fas fa-trash-alt"></i></button>
+    	</div>
+    </div>
+
+    <div class="movie-section">
+    	<div class="row">
+    		<div class="col-8">
+    			<h2>The English Patient</h2>
+    			<p class="movie-meta">Directed by Anthony Minghella</p>
+    			<p class="movie-description">
+    				Despite my belief that art and morality should be considered together, I found myself enraptured by this beautiful love story that exists just beyond the moral boundary. The protagonists, Juliette Binoche, the Indian sapper, and the man with the severed thumbs, are all victims of war, each having only briefly possessed the love they cherished before spending long days reminiscing about those fleeting moments of bliss. My favorite scene in the film is the rainy night where everything else seems to vanish - regret, resentment, they all disappear, and everyone is immersed in the victorious moment of the war, singing and dancing in the rain. Such beauty is something that even I, as an outsider to the story, wish could last forever, let alone those living it. All the actors complete their character portrayals with simplicity and restraint, complementing one another, making its Oscar for Best Picture unquestionable. In the end, perhaps death really is their best solace; the judgmental eyes of society and the transgressions beyond moral thresholds have already deprived them of enjoying the finer things in life. Better to depart this world, having paid the price, and to seek true happiness in another.
+    			</p>
+    			<p class="movie-description">
+    				"The English Patient" as a sweeping epic captures the complexities of love entwined with the ravages of war. The film meticulously paints the turbulent yet poignant experiences of its characters against the vast canvas of World War II, unraveling the profound impact of their intertwined fates. It is a cinematic tour de force that showcases the art of storytelling through its exploration of forbidden love, the inevitable tragedies of war, and the undying human spirit. The narrative threads a delicate balance between the grandeur of its scenic backdrops and the intimate moments of human connection, earning its place as a significant cultural artifact. This film transcends its period setting, speaking to universal themes of love, loss, and the redemptive power of memory, cementing its status as an enduring classic in the annals of film history.
+    			</p>
+    		</div>
+    		<div class="col-4">
+    			<img src="https://m.media-amazon.com/images/M/MV5BOTkxZTdkNTQtM2QwOS00NzRlLWEyMGItYTcxOTE4NTgyNGVhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg" alt="English Patient" class="movie-poster">
+    		</div>
+    		<button class="btn btn-danger remove-movie"><i class="fas fa-trash-alt"></i></button>
+    	</div>
+    </div>
+
+    <div class="movie-section">
+    	<div class="row">
+    		<div class="col-8">
+    			<h2>Thelma & Louise</h2>
+    			<p class="movie-meta">Directed by Ridley Scott</p>
+    			<p class="movie-description">
+    				My favorite moments include Thelma's proficient and decisive actions during the robbery recorded by surveillance, her promptness in hanging up the phone when realizing the police were listening, and her effortlessly cool demeanor when threatening the police. Of course, I cannot forget the “beauty” of the tanker truck exploding into flames. “I'm just sorry it was you who did it and not me,” encapsulates the essence of their journey. A green Thunderbird, a duo of fugitives, their increasingly sharp outfits and disheveled hairstyles, stripping away the earrings and necklaces symbolic of femininity, unfold a rich story of reliance between women and the freedom of their characters. They defy the stereotype of being "saved" and reject a crude interpretation of "justice." No need for “forgiveness,” no need for “choice,” they blame society, not “us,” choosing a firm and strong destruction over being executed by powerless and conceited preachings and manipulations. The wind on the road seems to hit the face with a grayish force, the revolutionary friendship between the partners becomes incredibly precious against the backdrop of a collectively disappointing male image, awakening a sense of autonomy in a distorted and unequal environment like dominos, the hardships and obstacles borne from injustice smoothly awaken their ideological values, refreshingly so.
+    			</p>
+    			<p class="movie-description">
+    				"Thelma & Louise" is a landmark in cinematic history for its bold exploration of female autonomy and resistance against societal norms. This film not only shatters the traditional narrative of women in need of rescue but also carves out a narrative space where women take control of their destiny, undeterred by societal constraints or expectations. Its significance lies in its portrayal of Thelma and Louise's evolution from ordinary women to iconic figures of empowerment, against a backdrop of breathtaking landscapes that symbolize both their escape and confrontation with the realities of their lives. By the end, their journey becomes a poignant statement on friendship, freedom, and the refusal to conform to a world that seeks to diminish their spirit. "Thelma & Louise" remains a powerful reflection on gender dynamics, celebrated for its courage in telling a story of two women who chose defiance over submission, marking a pivotal moment in the portrayal of women on screen and inspiring conversations about gender and freedom that continue to resonate.
+    			</p>
+    		</div>
+    		<div class="col-4">
+    			<img src="https://m.media-amazon.com/images/M/MV5BMjIxNDgzMDE2MF5BMl5BanBnXkFtZTcwNzY5NTk1NA@@._V1_.jpg" alt="Thelma & Louise" class="movie-poster">
+    		</div>
+    		<button class="btn btn-danger remove-movie"><i class="fas fa-trash-alt"></i></button>
+    	</div>
+    </div>
+
+    <div class="movie-section">
+    	<div class="row">
+    		<div class="col-8">
+    			<h2>Before Sunset</h2>
+    			<p class="movie-meta">Directed by Richard Linklater</p>
+    			<p class="movie-description">
+    				"Although I always pretend not to care, my heart is barely breathing." The most touching moment comes at the end, in the car, when the two release the emotions suppressed for nine years. For various reasons, that night left a profound impression on both, encapsulating a lifetime of romance and love. The subsequent stair-climbing scene delicately expresses their unspoken appreciation and affection for each other. One wrote a book for her; the other composed a song for him. Love… A tentative continuation, their subtle gestures and conversational exchanges mask the relentless surge of love beneath the calm. The love that spills off the screen, one causing trouble at home, the other laughing, mirrors the daily joy and leisure they truly share together. The presence of the plane intensifies the preciousness of their time, urging to live in the moment, to fully embrace and not regret the feelings of the present.
+    			</p>
+    			<p class="movie-description">
+    				"Before Sunset" is a deeply impactful film that explores the nuances of love, time, and missed opportunities with exquisite sensitivity. Its importance lies in its ability to capture the fleeting nature of time and the enduring power of connection between two people. Through its real-time narrative and intimate dialogue, the film invites viewers into the personal world of its characters, making their emotional journey universally relatable. It is a testament to the idea that true love transcends time and circumstance, offering a poignant reminder to cherish every moment. "Before Sunset" resonates as a beautifully crafted meditation on the complexities of love, memory, and the choices that define us, securing its place as a timeless classic in the romance genre.
+    			</p>
+    		</div>
+    		<div class="col-4">
+    			<img src="https://m.media-amazon.com/images/M/MV5BMTQ1MjAwNTM5Ml5BMl5BanBnXkFtZTYwNDM0MTc3._V1_FMjpg_UX1000_.jpg" alt="Before Sunset" class="movie-poster">
+    		</div>
+    		<button class="btn btn-danger remove-movie"><i class="fas fa-trash-alt"></i></button>
+    	</div>
+    </div>
+
+    <div class="movie-section">
+    	<div class="row">
+    		<div class="col-8">
+    			<h2>Close</h2>
+    			<p class="movie-meta">Directed by Lukas Dhont</p>
+    			<p class="movie-description">
+    				In "Close" (2022), the blossoming buds of friendship find themselves drifting apart, withering, and eventually returning to dust, depicting a somber and moist environment where a vine creeps upwards, intertwining with the pain of memories subtly engraved in its growth. Regret becomes eternal. As a new summer begins, the essence of close bonds persists, slowly learning the art of sowing emotions, yielding to the heavy downpour, and revealing rebirth under the scorching sun, allowing a spectrum of colors to shine alongside private sentiments. The emotional turbulence of adolescence is always sensitive and stubborn, with a style that contrasts sharply from before to after, melting and healing within the aesthetic grace of the lens, emanating an elegant freshness.
+    			</p>
+    			<p class="movie-description">
+    				"Close" is a poignant exploration of the fragile nature of human connections, especially during the tender years of youth. The film's significance lies in its unflinching portrayal of the emotional complexities inherent in forming and maintaining relationships. It navigates the nuanced landscape of friendship, loss, and reconciliation with a delicate hand, treating its characters with empathy and depth. By focusing on the subtle shifts in dynamics and the profound impact they have on individual identities, "Close" offers a universal narrative on the pains and pleasures of growing up. Its visual storytelling, coupled with a narrative that resonates with authenticity, makes the film a compelling examination of the emotional trials that define us. "Close" stands as a testament to the resilience of the human spirit and the indelible marks that relationships leave on our lives, making it a vital addition to contemporary cinema that addresses themes of youth, friendship, and the journey towards emotional maturity.
+    			</p>
+    		</div>
+    		<div class="col-4">
+    			<img src="https://m.media-amazon.com/images/M/MV5BODJjYmE1ZTEtNzU0Yi00NjI3LWFjMmQtZWZkNjk2NTQxOGMwXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg" alt="Close" class="movie-poster">
+    		</div>
+    		<button class="btn btn-danger remove-movie"><i class="fas fa-trash-alt"></i></button>
+    	</div>
+    </div>
+
+    <div class="movie-section">
+    	<div class="row">
+    		<div class="col-8">
+    			<h2>All About My Mother</h2>
+    			<p class="movie-meta">Directed by Pedro Almodóvar</p>
+    			<p class="movie-description">
+    				The pain of women is deeply concealed beneath their outward strength; their souls helplessly trapped in the fate assigned to them, yet their existence is firmly rooted in the physical strength of their bodies. Bright and passionate colors reflect pure and sincere fluctuations, while lingering years tell of a fresh and subtle melody. The complex world invites friends of life on a rugged journey and bids farewell to the fleeting dead with splendid blossoms, mixing and spreading warm emotions, emphasizing the indomitable greatness behind the vitality and hope that must not be forsaken or overlooked. In a brief period, the director perfectly balances light and heavy, lifting the heaviest burdens with a brisk rhythm, slowly unveiling and releasing the characters' repressed emotions, allowing viewers to witness the diversity of humanity, appreciate the brilliance within this alternative ensemble, and bask in the warmth of spring.
+    			</p>
+    			<p class="movie-description">
+    				"All About My Mother" stands as a masterful depiction of the complexities of womanhood, motherhood, and the intricate web of relationships that define our lives. Its importance lies in its empathetic portrayal of women navigating the tumultuous waters of loss, identity, and resilience. Pedro Almodóvar crafts a narrative that is both a tribute to and a critique of traditional representations of women, challenging viewers to reconsider the roles and expectations society imposes. Through its vivid characters and emotionally charged storytelling, the film explores themes of femininity, sexuality, and the enduring power of maternal love. "All About My Mother" transcends the boundaries of conventional cinema to celebrate the strength and vulnerability of women, making it a poignant and timeless piece that resonates with audiences worldwide. Its contribution to the dialogue on gender, identity, and the essence of human connection cements its status as a seminal work in the canon of feminist cinema.
+    			</p>
+    		</div>
+    		<div class="col-4">
+    			<img src="https://m.media-amazon.com/images/M/MV5BZmIwZTYyMTUtZGE0Mi00NWIwLTljMmEtNjA2OTg0NDczYTM1XkEyXkFqcGdeQXVyMTcwOTQzOTYy._V1_.jpg" alt="All About My Mother" class="movie-poster">
+    		</div>
+    		<button class="btn btn-danger remove-movie"><i class="fas fa-trash-alt"></i></button>
+    	</div>
+    </div>
+
+    <div class="movie-section">
+    	<div class="row">
+    		<div class="col-8">
+    			<h2>In the Mood for Love</h2>
+    			<p class="movie-meta">Directed by Wong Kar Wai</p>
+    			<p class="movie-description">
+    				The unique aesthetic style and cinematographic language of "In the Mood for Love" create a misty and elusive beauty, focusing intently on the distance, deliberately prolonging the agony, attempting to render the shared misery in the narrow corridors even a bit dignified under a voyeuristic gaze. Thus, it heartrendingly plays the role of the sorrow-maker, feigning distraction and entanglement, using a cat-and-mouse approach to probe, repeatedly scrutinizing, all to prove that any provocation stems from the other’s initiation rather than one’s own incompetence. It serves to vent the desire for revenge behind a cultured mask, only to face the idle chatter and scrutiny of onlookers, eventually stirring up a storm of guilt. Vaguely, it becomes apparent that all coincidences are the result of one's meticulous planning, understanding that going with the flow reveals human agency. Yet, in the torrential rain, we are not only trapped by the railings beside the window but also by ludicrous coincidences and hesitations. In the end, secrets are deeply buried in the heart, and emotions are measured within oneself.
+    			</p>
+    			<p class="movie-description">
+    				"In the Mood for Love" is a cinematic masterpiece that elegantly captures the unspoken yearnings and repressed desires of its protagonists against the backdrop of 1960s Hong Kong. Its significance lies in Wong Kar-wai's exquisite use of visual storytelling, color, and music to evoke a sense of longing and melancholy. The film's meticulous attention to detail, from the characters’ costumes to the set design, immerses viewers in an atmospheric exploration of love and loneliness. It challenges conventional narratives of romance by focusing on the emotional intensity of moments that might have been, rather than those that were. "In the Mood for Love" is a poignant reflection on the human condition, the complexities of relationships, and the eternal quest for connection and meaning. Through its hauntingly beautiful portrayal of two souls passing in the night, the film leaves a lasting impact on the viewer, making it a landmark in world cinema and a profound meditation on the nature of love and longing.
+    			</p>
+    		</div>
+    		<div class="col-4">
+    			<img src="https://m.media-amazon.com/images/M/MV5BYWVjNjMwZTgtMGYyYy00NmVhLWE1NDItMzFhMmJkYTNjYWIwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="In the Mood for Love" class="movie-poster">
+    		</div>
+    		<button class="btn btn-danger remove-movie"><i class="fas fa-trash-alt"></i></button>
+    	</div>
+    </div>
+
+    <div class="movie-section">
+    	<div class="row">
+    		<div class="col-8">
+    			<h2>2001: A Space Odyssey</h2>
+    			<p class="movie-meta">Directed by Stanley Kubrick</p>
+    			<p class="movie-description">
+    				Behind the unfettered imagination, the answer to life meanders through the gorgeous, dazzling starry sky like a dream, with unrestricted milestones spanning unimaginably between birth and rebirth. It invites us to purely savor this incredible greatness, to meditate on the awe-inspiring possibilities at different scales, daunting yet spectacular, where past, present, and future coexist simultaneously.
+    			</p>
+    			<p class="movie-description">
+    				"2001: A Space Odyssey" is an epochal film that redefines the boundaries of cinema and science fiction. Its significance lies not just in its groundbreaking visual effects and ambitious scope, but in its profound contemplation of existence, intelligence, and humanity's place in the universe. Directed by Stanley Kubrick and co-written with Arthur C. Clarke, the film embarks on an odyssey that spans the dawn of man to the age of space exploration, exploring themes of evolution, technology, and extraterrestrial life. Its open-ended narrative and symbolic imagery invite endless interpretation, making it a cornerstone of cinematic art that encourages viewers to ponder the mysteries of the cosmos and our quest for meaning. "2001: A Space Odyssey" is celebrated for its visionary approach and its capacity to inspire awe and reflection about the vast, uncharted territories of both outer space and human consciousness, securing its legacy as a masterpiece of film history.
+    			</p>
+    		</div>
+    		<div class="col-4">
+    			<img src="https://m.media-amazon.com/images/M/MV5BMmNlYzRiNDctZWNhMi00MzI4LThkZTctMTUzMmZkMmFmNThmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg" alt="2001: A Space Odyssey" class="movie-poster">
+    		</div>
+    		<button class="btn btn-danger remove-movie"><i class="fas fa-trash-alt"></i></button>
+    	</div>
+    </div>
+
+    <div class="movie-section">
+    	<div class="row">
+    		<div class="col-8">
+    			<h2>Puss in Boots: The Last Wish</h2>
+    			<p class="movie-meta">Directed by Joel Crawford</p>
+    			<p class="movie-description">
+    				Wishes are about the anticipation of fulfillment, not a choice that disregards the people and hearts before us. The efforts of a lifetime of adventure should culminate in meaning, in the ability to understand oneself. Some folks might use up eight lives, while some hermits need only half of one. I genuinely admire those who overcome the nightmares of the Grim Reaper, who trust unwaveringly, who cherish the warmth of family and friends. Yet, I love even more this dog who, despite many tragic experiences, remains happy, interesting, smart, and adorable. With immense enthusiasm for life and friends, even if a fortune-filled life never materializes, they exercise the grand right of living, harboring kindness and courage to express and believe in the splendid posture of life. It's a visually appealing film that caters to all tastes, not only are the fight scenes designed with elegance and coolness, but behind the dense laughter, one can detect a hint of floral fragrance, looking from afar, blossoming is a flower embodying the true essence of life.
+    			</p>
+    			<p class="movie-description">
+    				"Puss in Boots: The Last Wish" captures the essence of adventure and the quest for meaning beyond mere survival. Its significance stems from its deep exploration of themes such as the value of life, friendship, and the pursuit of genuine desires over superficial gains. Through the whimsical yet poignant journey of its feline protagonist, the film addresses existential questions and the universal search for happiness, making it resonate with audiences of all ages. It cleverly weaves humor, action, and heartfelt moments to deliver a story that is both entertaining and enlightening. The character of Puss in Boots, with his indomitable spirit and unwavering loyalty, serves as a symbol of resilience and the power of hope. By highlighting the importance of cherishing each moment and the bonds we form, "Puss in Boots: The Last Wish" stands as a testament to the beauty of life, even when faced with its impermanence, making it a memorable and impactful addition to the world of animated storytelling.
+    			</p>
+    		</div>
+    		<div class="col-4">
+    			<img src="https://m.media-amazon.com/images/M/MV5BNjMyMDBjMGUtNDUzZi00N2MwLTg1MjItZTk2MDE1OTZmNTYxXkEyXkFqcGdeQXVyMTQ5NjA0NDM0._V1_.jpg" alt="Puss in Boots: The Last Wish" class="movie-poster">
+    		</div>
+    		<button class="btn btn-danger remove-movie"><i class="fas fa-trash-alt"></i></button>
+    	</div>
+    </div>
+
+  </div>
+
+  <div id="footer" class="container-fluid">
+  	<div class="row">
+      <div class="col-12 text-center">
+        ITP 303 - Final Project of Yixuan Wang &copy; 2024
+      </div>
+    </div>
+  </div>
+
+	<script>
+	  document.addEventListener('DOMContentLoaded', function() {
+	    const form = document.getElementById('add-movie-form');
+	    const movieList = document.querySelector('.container');
+
+	    form.onsubmit = function(event) {
+	      event.preventDefault();
+
+	      let valid = true;
+	      const title = document.getElementById('movie-title');
+	      const director = document.getElementById('movie-director');
+	      const feelings = document.getElementById('movie-feelings');
+	      const inspiration = document.getElementById('movie-inspiration');
+	      const posterURL = document.getElementById('movie-poster-url');
+
+	      if (!/^[A-Z0-9][\w'&:]*$|^([A-Z0-9][\w'&:]*)([\s-][A-Z0-9][\w'&:]*)*$/.test(title.value.trim())) {
+		      document.getElementById('movie-title-error').innerText = 'Each word in the film name must start with a capital letter.';
+		      valid = false;
+		    } else {
+		      document.getElementById('movie-title-error').innerText = '';
+		    }
+
+        const namePattern = /^([A-Z][a-z]*|[A-Z]\.)\s+([A-Z][a-z]*\s*)?([A-Z]\.?\s*)?([A-Z][a-z]*)?$/;
+
+        if (!namePattern.test(director.value.trim())) {
+            document.getElementById('movie-director-error').innerText = 'Invalid format. Please enter a valid name (first and last, optional middle initial/name, all starting with a capital letter).';
+            valid = false;
+        } else {
+            document.getElementById('movie-director-error').innerText = '';
+        }
+
+	      if (!/^(https?:\/\/.*\.(?:png|jpg|jpeg))$/.test(posterURL.value.trim())) {
+	        document.getElementById('movie-poster-url-error').innerText = 'Invalid URL. Please enter a valid image URL.';
+	        valid = false;
+	      } else {
+	        document.getElementById('movie-poster-url-error').innerText = '';
+	      }
+
+	      document.getElementById('movie-feelings-error').innerText = '';
+	      document.getElementById('movie-inspiration-error').innerText = '';
+	      if (!/^[A-Z].*[.!?]$/.test(feelings.value.trim())) {
+	        document.getElementById('movie-feelings-error').innerText = 'Please write a complete sentence.';
+	        valid = false;
+	      }
+	      if (!/^[A-Z].*[.!?]$/.test(inspiration.value.trim())) {
+	        document.getElementById('movie-inspiration-error').innerText = 'Please write a complete sentence.';
+	        valid = false;
+	      }
+
+	      if (valid) {
+	        addMovie(title.value, director.value, feelings.value, inspiration.value, posterURL.value);
+	        title.value = '';
+	        director.value = '';
+	        feelings.value = '';
+	        inspiration.value = '';
+	        posterURL.value = '';
+	      }
+	    };
+
+	    function addMovie(title, director, feelings, inspiration, posterURL) {
+	      const newSection = document.createElement('div');
+	      newSection.className = 'movie-section';
+	      newSection.innerHTML = `
+	        <div class="row">
+	          <div class="col-8">
+	            <h2>${title}</h2>
+	            <p class="movie-meta">Directed by ${director}</p>
+	            <p class="movie-description">${feelings}</p>
+	            <p class="movie-description">${inspiration}</p>
+	          </div>
+	          <div class="col-4">
+	            <img src="${posterURL}" alt="${title}" class="movie-poster">
+	          </div>
+	          <button class="btn btn-danger remove-movie"><i class="fas fa-trash-alt"></i></button>
+	        </div>
+	      `;
+	      movieList.insertBefore(newSection, movieList.firstChild);
+
+	      newSection.querySelector('.remove-movie').addEventListener('click', function() {
+	        this.parentElement.parentElement.remove();
+	      });
+	    }
+
+	    document.querySelectorAll('.remove-movie').forEach(button => {
+	      button.addEventListener('click', function() {
+	        this.parentElement.parentElement.remove();
+	      });
+	    });
+	  });
+	</script>
+
+</body>
+</html>

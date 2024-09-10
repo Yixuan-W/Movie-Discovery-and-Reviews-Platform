@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Final Project | Project Summary</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #FFF9E3;
+        }
+        h1, h4, h5 {
+            color: darkslategray;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h4, h5 {
+            font-size: 1.5em;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .image {
+            width: 50%;
+            height: auto;
+        }
+        #footer {
+            background-color: #777;
+            color: #FFF;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="mt-4 mb-4">
+        <h1 class="text-center">Project Summary: Cinema Spectrum</h1>
+    </div>
+
+    <div class="container mb-4 content">
+        <h4>Introduction</h4>
+        <p>Cinema Spectrum is an interactive platform designed to engage movie enthusiasts by providing detailed information, facilitating discussions, and offering user-driven content alongside API-driven dynamic data. The site incorporates advanced web technologies to create a comprehensive and immersive user experience.</p>
+
+        <h4>Functional Overview</h4>
+        <p>Each page of Cinema Spectrum serves a unique function, integrating different web technologies to provide a comprehensive and interactive experience for movie enthusiasts:</p>
+        <ul>
+            <li><strong>Discover & Watch:</strong> This page offers users a glimpse into the current landscape of popular, trending, and upcoming movies, with data fetched in real-time from The Movie Database (TMDb) API. Users can explore trailers by title using the search functionality. To ensure a seamless viewing experience, an intelligent filtering mechanism prevents the duplication of movies across different categories, such as 'Trending' and 'Popular'.</li>
+            <li><strong>Community Reviews:</strong> Here, users can actively engage by posting, editing, and deleting their reviews. The page is closely linked to a MySQL database, enabling CRUD operations to manage user-generated content effectively. Pagination is implemented to streamline the presentation of reviews, ensuring optimal performance and navigation. Additionally, users have the ability to add new directors if the current database does not include them. Both frontend and backend validation processes validate user input, guaranteeing the integrity and accuracy of data stored in the database.</li>
+            <li><strong>Curator's Corner:</strong> This section empowers users to curate their own personalized lists of films, complete with detailed reviews and dynamic management capabilities. Leveraging event-driven DOM manipulation, users can add or remove movie entries in real-time, experiencing immediate visual updates without the need for page refreshes.</li>
+        </ul>
+
+        <h4>CSS Framework</h4>
+        <p>The website utilizes multiple CSS frameworks to enhance its design and functionality. Bootstrap 4 is the primary framework, known for its powerful grid system and responsive features that ensure the website is mobile-friendly and aesthetically pleasing across all devices. It offers a range of pre-built components and utility classes that expedite the development process.</p>
+        <p>In addition to Bootstrap, the website also incorporates FontAwesome, a popular library for scalable vector icons. FontAwesome allows for the easy integration of icons into the web design, enhancing the user interface with visually appealing graphics that can be styled and manipulated with CSS.</p>
+        <p>Bootstrap Documentation: <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">https://getbootstrap.com/docs/4.0/getting-started/introduction/</a></p>
+        <p>FontAwesome Documentation: <a href="https://fontawesome.com/v5.15/how-to-use/on-the-web/setup/getting-started">https://fontawesome.com/v5.15/how-to-use/on-the-web/setup/getting-started</a></p>
+
+        <h4>API Integration and External Resources</h4>
+        <p>The site extensively uses TMDb API to pull real-time data about films, including posters, trailers, and ratings, providing users with up-to-date information and enhancing the user experience with rich media content.</p>
+        <ul>
+            <li>Popular Movies API: <a href="https://developer.themoviedb.org/reference/movie-popular-list">https://developer.themoviedb.org/reference/movie-popular-list</a></li>
+            <li>Top Rated Movies API: <a href="https://developer.themoviedb.org/reference/movie-top-rated-list">https://developer.themoviedb.org/reference/movie-top-rated-list</a></li>
+            <li>Upcoming Movies API: <a href="https://developer.themoviedb.org/reference/movie-upcoming-list">https://developer.themoviedb.org/reference/movie-upcoming-list</a></li>
+            <li>Trending Movies API: <a href="https://developer.themoviedb.org/reference/trending-movies">https://developer.themoviedb.org/reference/trending-movies</a></li>
+            <li>Movie Trailers API: <a href="https://developer.themoviedb.org/reference/movie-videos">https://developer.themoviedb.org/reference/movie-videos</a></li>
+        </ul>
+
+        <h4>Database</h4>
+        <p>The backend setup involves PHP and MySQL. To ensure a robust user experience, the database contains pre-added movie data, allowing users to perform CRUD operations effectively. This pre-existing data provides users with enough content to edit, delete, and paginate through, as well as the ability to add their own entries.</p>
+        <p><strong>Database Diagram</strong>:</p>
+        <div class="row mb-2 mt-2 justify-content-center">
+            <img src="img/database_diagram.png" alt="Database Diagram" class="image">
+        </div>
+
+        <h4>Extras Implemented</h4>
+        <ul>
+            <li><strong>Event-driven DOM Manipulation</strong>: This feature allows users to dynamically add and delete film entries within the <em>Curator's Corner</em> section. Through JavaScript, the webpage responds to user actions in real-time, updating the displayed content without requiring a full page reload. This creates a seamless and interactive experience, empowering users to customize their film collections effortlessly.</li>
+            <li><strong>JSON / JSONP API Usage</strong>: The website leverages JSON and JSONP APIs to fetch movie data from external source, The Movie Database (TMDb). By interacting with these APIs, users can search for movie trailers and explore trending or popular films. This enriches the user experience by providing dynamic content that reflects the latest trends and user preferences.</li>
+            <li><strong>Pagination</strong>: Pagination is implemented within the Community Reviews section to manage the extensive user-generated content effectively. By breaking down the content into manageable pages, users can navigate through reviews without overwhelming the interface. This enhances usability and ensures a smooth browsing experience, especially for users accessing the site on devices with limited screen space.</li>
+            <li><strong>Frontend ↔ Backend Interaction</strong>: Although the site does not employ traditional AJAX techniques, it maintains seamless communication between the frontend and backend systems. JavaScript functions send user input to PHP scripts, which handle database operations and return relevant data to the frontend for display. This bidirectional interaction ensures efficient data exchange without requiring full page reloads, contributing to a responsive and dynamic web experience.</li>
+        </ul>
+
+    </div>
+
+    <div id="footer" class="container-fluid">
+        <div class="row">
+          <div class="col-12 text-center">
+            ITP 303 - Final Project of Yixuan Wang &copy; 2024
+          </div>
+        </div>
+    </div>
+
+</body>
+</html>
